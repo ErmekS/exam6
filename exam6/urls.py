@@ -16,10 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from webapp.views import index_view, create_guestbook
+from webapp.views import index_view, create_guestbook, update_guestbook, delete_guestbook
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index_view, name="index"),
     path('guest/add/', create_guestbook, name="create_guestbook"),
+    path('guest/<int:pk>/update', update_guestbook, name="update_guestbook"),
+    path('guest/<int:pk>/delete', delete_guestbook, name="delete_guestbook"),
+
 ]
