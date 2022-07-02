@@ -9,7 +9,7 @@ class GuestbookAdmin(admin.ModelAdmin):
     list_display_links = ['entry']
     list_filter = ['status']
     search_fields = ['status']
-    fields = ['entry', 'status', 'created_time', 'updated_time']
+    fields = ['author', 'email', 'entry', 'status', 'created_time', 'updated_time']
     readonly_fields = ['created_time', 'updated_time']
 
 
