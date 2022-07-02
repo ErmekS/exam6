@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}Удаление записи{% endblock %}
 
 {% block content %}
@@ -7,7 +8,7 @@
     <h2>Вы уверены что хотите удалить запись {{ guestbook.author }}?</h2>
     <button type="submit">Да</button>
 </form>
-    <a href="{% url "index" %}">Нет</a>
+   <button type="submit"><a href="{% url "index" %}">Нет</a></button>
 {% endblock %}
 
 
